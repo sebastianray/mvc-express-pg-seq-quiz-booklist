@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Dilan",
+      "author": "Pidi Baiq",
+      "releasedDate": "21-3-2011",
+      "pages": 250,
+      "genre": "Drama"
+    },
+    {
+        "title": "Scott Pilgrim",
+        "author": "Bryan Lee",
+        "releasedDate": "21-3-2008",
+        "pages": 230,
+        "genre": "Fantasy"
+    }
+]

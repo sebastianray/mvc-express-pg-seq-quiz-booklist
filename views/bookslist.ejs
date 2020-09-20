@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Store List</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        th,td {
+            padding : 10px;
+        }
+        thead {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books List</h1>
+    <p>This is Books Store list!</p>
+    
+    <a href="/">Home</a>
+    <a href="/books">Booklist</a>
+    <a href="/books/add">Add Book</a>
+    <!-- <a href="/books/edit">Edit Book</a> -->
+    
+    <h2>This is books list</h2>
+    <!-- <%= books %> -->
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Release Date</th>
+                <th>Pages</th>
+                <th>Genre</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(books => { %>
+                <tr>
+                    <td><%= books.id %></td>
+                    <td><%= books.title %></td>
+                    <td><%= books.author %></td>
+                    <td><%= books.releasedDate %></td>
+                    <td><%= books.pages %></td>
+                    <td><%= books.genre %></td>
+                    <td><a href="edit/ <%= books.id %>">Edit</a></td>
+                    <td><a href="books/delete/ <%= books.id %>">Delete</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

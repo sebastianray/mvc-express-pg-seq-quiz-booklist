@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Update Books List</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        th,td {
+            padding : 10px;
+        }
+        thead {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books List</h1>
+    <p>This is Books Store list!</p>
+    
+    <a href="/">Home</a>
+    <a href="/books">Booklist</a>
+    <a href="/books/add">Add Book</a>
+    <!-- <a href="/books/edit/:id">Update Book</a> -->
+    
+    <h2>Update Books!</h2>
+    <form action=":id" method="post">
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="author" id="author" placeholder="Author">
+        <input type="text" name="releasedDate" id="releasedDate" placeholder="Released Date (DD-MM-YYYY)">
+        <input type="number" name="pages" id="pages" placeholder="Pages">
+        <select name="genre" id="genre">
+            <option value="Article">Article</option>
+            <option value="Biography">Biography</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Fiction">Fiction</option>
+        <input type="hidden" value=":id" name=":id">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
